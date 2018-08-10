@@ -79,7 +79,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='myWorld'>
+    <model name='room_model'>
       <pose frame=''>2.115 0.795 0 0 -0 0</pose>
       <link name='Wall_1'>
         <collision name='Wall_1_Collision'>
@@ -450,7 +450,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='myWorld'>
+      <model name='room_model'>
         <pose frame=''>-0.039291 3.19461 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='Wall_1'>
