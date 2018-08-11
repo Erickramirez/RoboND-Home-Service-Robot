@@ -9,9 +9,10 @@ This is the final project of Udacity Robotics Nanodegree. This is an implementat
 6. Write an add_markers node that subscribes to your robot odometry, keeps track of your robot pose, and publishes markers to rviz.
 
 # How to run it
-* wrking enviroment used: /home/workspace/catkin_ws
+* working enviroment used: /home/workspace/catkin_ws
 * if the catkin_location is different, please update the ShellScripts
 
+## Project Setup
 Go to workspace directory
 ``` bash
 $ cd ~/catkin_ws
