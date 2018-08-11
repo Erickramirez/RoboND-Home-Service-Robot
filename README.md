@@ -46,13 +46,18 @@ Home Service
 $ ./src/RoboND-Home-Service-Robot/ShellScripts/home_service.sh
 ```
 
-Note:
+# Note:
 the initial location of the robot has been changed:
 in order to recreate it, feel free to replace the file: 
 ```
-/home/workspace/catkin_ws/src/RoboND-Home-Service-Robot/launch/kobuki.launch.xml
+~/catkin_ws/src/RoboND-Home-Service-Robot/launch/kobuki.launch.xml
 ```
-to the location:
+to the location turtlebot_simulator-indigo:
 ```
-/home/workspace/catkin_ws/src/utilities/turtlebot_simulator-indigo/turtlebot_gazebo/launch/includes/kobuki.launch.xml
+~/turtlebot_simulator-indigo/turtlebot_gazebo/launch/includes/kobuki.launch.xml
 ```
+in this case it has been performed, because all the ROS packages you downloaded are in the location:
+```
+~/catkin_ws/src/RoboND-Home-Service-Robot/utilities/
+```
+
