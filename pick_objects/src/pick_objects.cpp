@@ -27,12 +27,12 @@ int main(int argc, char** argv){
   goal.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach
-  goal.target_pose.pose.position.x = 6.0;
-  goal.target_pose.pose.position.y = 4.0;
+  goal.target_pose.pose.position.x = -5.0;
+  goal.target_pose.pose.position.y = -4.0;
   goal.target_pose.pose.orientation.w = 2.0;
 
    // Send the goal position and orientation for the robot to reach
-  ROS_INFO("Sending goal - (6.0,4.0,2.0)");
+  ROS_INFO("Sending goal - (-5.0,-4.0,2.0)");
   ac.sendGoal(goal);
 
   // Wait an infinite time for the results
@@ -40,21 +40,21 @@ int main(int argc, char** argv){
 
   // Check if the robot reached its goal
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-  	ROS_INFO("Hooray, the base moved to (6.0,4.0,2.0)");
+  	ROS_INFO("Hooray, the base moved to (-5.0,-4.0,2.0)");
   else
-  	ROS_INFO("he base failed to move forward 1 meter for some reason  - (6.0,4.0,2.0)");
+  	ROS_INFO("The base failed to move forward 1 meter for some reason  - (-5.0,-4.0,2.0)");
   ROS_INFO("Waiting ...");
   std::chrono::seconds duration(5);
   std::this_thread::sleep_for(duration);
   ROS_INFO("Waited for 5 seconds.");
   
   // Define a position and orientation for the robot to reach
-  goal.target_pose.pose.position.x = 4.0;
-  goal.target_pose.pose.position.y = -6.0;
+  goal.target_pose.pose.position.x = 2.0;
+  goal.target_pose.pose.position.y = -8.0;
   goal.target_pose.pose.orientation.w = 1.0;
   
   // Send the goal position and orientation for the robot to reach
-  ROS_INFO("Sending  goal - (4.0,-6.0,1.0)");
+  ROS_INFO("Sending  goal - (2.0,-8.0,1.0)");
   ac.sendGoal(goal);
   
   // Wait an infinite time for the results
@@ -62,9 +62,9 @@ int main(int argc, char** argv){
   
   // Check if the robot reached its goal
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-  	ROS_INFO("Hooray, the base moved to (4.0,-6.0,1.0)");
+  	ROS_INFO("Hooray, the base moved to (2.0,-8.0,1.0)");
   else
-  	ROS_INFO("he base failed to move forward 1 meter for some reason  - (4.0,-6.0,1.0)");
+  	ROS_INFO("he base failed to move forward 1 meter for some reason  - (2.0,-8.0,1.0)");
   
 
 
